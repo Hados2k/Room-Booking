@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking System</title>
+    <style>
+        @font-face {
+            font-family: 'Bahnschrift SemiBold';
+            src: url('path_to_your_font/BahnschriftSemiBold.ttf') format('truetype');
+        }
+        body {
+            background-color: #f5f4ef; /* Eggshell white background color */
+        }
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 100%; /* Ensure the table takes up full width of container */
+        }
+        th, td {
+            border: 2px solid black;
+            text-align: center;
+            width: 20px; /* Adjusted width */
+            height: 20px; /* Adjusted height */
+            padding: 10px;
+        }
+        th {
+            background-color: white; /* White background for table headers */
+        }
+        td:first-child {
+            background-color: white; /* White background for row headers */
+            font-family: 'Bahnschrift SemiBold', sans-serif;
+            font-size: 16px; /* Larger font size */
+            font-weight: bold; /* Bold font */
+            width: 20px; /* Adjusted width */
+            height: 20px; /* Adjusted height */
+        }
+        .week-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ADD8E6; /* Light blue background color for containers */
+            overflow: auto; /* Ensure content fits within the container */
+        }
+        .week-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Bahnschrift SemiBold', sans-serif;
+            font-size: 24px; /* Larger font size */
+            font-weight: bold; /* Bold font */
+        }
+        .delete-week {
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        .photo-dropdown {
+            margin-top: 10px;
+            position: relative;
+        }
+        .photo-dropdown-content {
+            display: none;
+            position: relative;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            max-height: 300px;
+            max-width: auto;
+            overflow: auto; /* Allow both horizontal and vertical scrolling */
+            z-index: 1;
+            white-space: nowrap;
+        }
+        .photo-dropdown-content .img-container {
+            display: inline-block;
+            vertical-align: top;
+            margin: 5px;
+            text-align: center;
+        }
+        .photo-dropdown-content img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .photo-dropdown-content button {
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        .show {
+            display: block;
+        }
+        .add-week-button {
+            margin-bottom: 20px; /* Offset the Add Week button */
+            padding: 5px;
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="add-week-button" onclick="addWeek()">Add Week</button>
+    <div id="weeksContainer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
